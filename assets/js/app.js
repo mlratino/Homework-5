@@ -130,22 +130,21 @@ $(document).on('click','#reset', function() {
 } 
 
 
-    function preloadImage(status) {
-            const correctAnswer = quizQuestions[currentQuestion].correctAnswer;
+function preloadImage(status) {
+const correctAnswer = quizQuestions[currentQuestion].correctAnswer;
 
 
 if(status==='win') {
     $('#game').html(`
-    <p> class="preload-image">Treat Yo Self!</p>
-    <p> class="preload-image">Correct answer is <b>${correctAnswer}</b></p>
+    <p class="preload-image">Treat Yo Self!</p>
+    <p class="preload-image">Correct answer is <b>${correctAnswer}</b></p>
     <img src ="${randomImage(winningImages)}"/>
     `);
 } else{
 $('#game').html(`
-    <p> class="preload-image">Knope the correct answer was <b>${correctAnswer}</b></p>
-    <p> class="preload-image">You could still work for the government.</p>
-    <img src ="${randomImage(lostImages)}/>
-    
+    <p class="preload-image">Knope the correct answer was <b>${correctAnswer}</b></p>
+    <p class="preload-image">You could still work for the government.</p>
+    <img src ="${randomImage(lostImages)}"/>
     `);
     console.log("Lil'Sebastian",randomImage);
 }
